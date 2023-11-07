@@ -15,7 +15,7 @@ class App extends React.Component {
         {
           id: 1,
           title: 'Стул',
-          img: 'стул.jpg',
+          img: 'chair.jpg',
           desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, id?',
           category: 'chairs',
           price: '49.99',
@@ -23,7 +23,7 @@ class App extends React.Component {
         {
           id: 2,
           title: 'Диван',
-          img: 'Диван.jpg',
+          img: 'sofa.jpg',
           desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, id?',
           category: 'sofa',
           price: '499.99',
@@ -31,7 +31,7 @@ class App extends React.Component {
         {
           id: 3,
           title: 'Тумбочка',
-          img: 'тумба.jpg',
+          img: 'table.jpg',
           desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, id?',
           category: 'tables',
           price: '249.99',
@@ -39,7 +39,7 @@ class App extends React.Component {
         {
           id: 4,
           title: 'Диван 2',
-          img: 'Диван.jpg',
+          img: 'sofa.jpg',
           desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, id?',
           category: 'sofa',
           price: '499.99',
@@ -47,7 +47,7 @@ class App extends React.Component {
         {
           id: 5,
           title: 'Стул 2',
-          img: 'стул.jpg',
+          img: 'chair.jpg',
           desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, id?',
           category: 'chairs',
           price: '49.99',
@@ -55,14 +55,14 @@ class App extends React.Component {
         {
           id: 6,
           title: 'Тумбочка 2',
-          img: 'тумба.jpg',
+          img: 'table.jpg',
           desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, id?',
           category: 'tables',
           price: '249.99',
         },
       ],
       showFullItem: false,
-      fullItem: {}
+      fullItem: {},
     };
     this.state.currentItems = this.state.items;
     this.addToOrder = this.addToOrder.bind(this);
@@ -76,16 +76,26 @@ class App extends React.Component {
       <div className="wrapper">
         <Header orders={this.state.orders} onDelete={this.deleteOrder} />
         <Categories chooseCategory={this.chooseCategory} />
-        <Items onShowItem={this.onShowItem} items={this.state.currentItems} onAdd={this.addToOrder} />
-        {this.state.showFullItem && <ShowFullItem onShowItem={this.onShowItem} onAdd={this.addToOrder} item={this.state.fullItem}/>}
+        <Items
+          onShowItem={this.onShowItem}
+          items={this.state.currentItems}
+          onAdd={this.addToOrder}
+        />
+        {this.state.showFullItem && (
+          <ShowFullItem
+            onShowItem={this.onShowItem}
+            onAdd={this.addToOrder}
+            item={this.state.fullItem}
+          />
+        )}
         <Footer />
       </div>
     );
   }
 
   onShowItem(item) {
-    this.setState({fullItem: item})
-    this.setState({ showFullItem: !this.state.showFullItem})
+    this.setState({ fullItem: item });
+    this.setState({ showFullItem: !this.state.showFullItem });
   }
 
   chooseCategory(category) {
