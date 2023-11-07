@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/shop/static/css/main.6b178c52.css",
+    "main.js": "/shop/static/js/main.2a466007.js",
+    "static/media/1614344716_29-p-svetlii-fon-interer-34.jpg": "/shop/static/media/1614344716_29-p-svetlii-fon-interer-34.e3ea7c4202414d8a0ab9.jpg",
+    "index.html": "/shop/index.html",
+    "main.6b178c52.css.map": "/shop/static/css/main.6b178c52.css.map",
+    "main.2a466007.js.map": "/shop/static/js/main.2a466007.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b178c52.css",
+    "static/js/main.2a466007.js"
+  ]
+}
